@@ -1,7 +1,8 @@
 import axios from "axios";
+import API_URL from "./api";
 
 const http = axios.create({
-  baseURL: "https://market-trend-forecaster-main.onrender.com", // updated to production
+  baseURL: API_URL, // dynamically switches based on dev/prod
 });
 
 // Automatically attach token to every request
