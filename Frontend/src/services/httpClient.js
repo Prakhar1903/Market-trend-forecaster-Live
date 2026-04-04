@@ -1,8 +1,7 @@
 import axios from "axios";
-import API_URL from "./api";
 
 const http = axios.create({
-  baseURL: API_URL, // dynamically switches based on dev/prod
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:8000", // updated to fallback
 });
 
 // Automatically attach token to every request

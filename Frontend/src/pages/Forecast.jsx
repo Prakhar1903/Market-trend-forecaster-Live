@@ -10,8 +10,8 @@ import {
     Zap, ChevronDown, ChevronUp, RefreshCw, Info
 } from "lucide-react";
 
-import API_URL from "../services/api";
-const API = `${API_URL}/api/forecast`;
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API = `${API_BASE}/api/forecast`;
 
 const BRAND_COLORS = {
     "echo-dot": { solid: "#3b82f6", light: "rgba(59,130,246,0.15)" },
